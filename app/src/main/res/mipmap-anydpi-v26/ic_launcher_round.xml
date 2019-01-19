@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:myAndroid="http://schemas.myAndroid.com/apk/res/myAndroid">
+    <background myAndroid:drawable="@drawable/ic_launcher_background" />
+    <foreground myAndroid:drawable="@drawable/ic_launcher_foreground" />
+</adaptive-icon>
