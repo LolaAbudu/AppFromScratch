@@ -48,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
                 AndoidAdapter andoidAdapter = new AndoidAdapter(myAndroidList);
                 recyclerView.setAdapter(andoidAdapter);
                 recyclerView.setLayoutManager(linearLayoutManager);
+
+                //or can just pass do below without creating a new List and dont need the foreach loop either
+//                recyclerView.setAdapter(new AndoidAdapter(response.body().getAndroidList()));
+//                recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
+
             }
 
             @Override

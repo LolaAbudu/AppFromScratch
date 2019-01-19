@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.TextView;
+
+import com.example.lolaabudu.appfromscratch.view.AndroidViewHolder;
 
 public class DisplayActivity extends AppCompatActivity {
     private TextView verTextView;
@@ -20,9 +23,11 @@ public class DisplayActivity extends AppCompatActivity {
         apiTextView = findViewById(R.id.api_textView_displayActivity);
 
         Intent intent = getIntent();
-        verTextView.setText(intent.getStringExtra("ver"));
-        nameTextView.setText(intent.getStringExtra("name"));
-        apiTextView.setText(intent.getStringExtra("api"));
+        verTextView.setText(intent.getStringExtra(AndroidViewHolder.VER_KEY));
+        nameTextView.setText(intent.getStringExtra(AndroidViewHolder.NAME_KEY));
+        apiTextView.setText(intent.getStringExtra(AndroidViewHolder.API_KEY));
+
+        Log.d("this", "tiiis" +intent.getStringExtra("ver").toString());
 
     }
 }

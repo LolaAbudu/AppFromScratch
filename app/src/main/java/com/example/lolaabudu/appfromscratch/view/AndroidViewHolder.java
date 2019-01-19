@@ -18,6 +18,10 @@ public class AndroidViewHolder extends RecyclerView.ViewHolder {
     private MyAndroid myAndroid;
     private Intent intent;
 
+    public static final String VER_KEY = "ver";
+    public static final String NAME_KEY = "name";
+    public static final String API_KEY = "api";
+
     public AndroidViewHolder(@NonNull View itemView) {
         super(itemView);
         verTextView = itemView.findViewById(R.id.ver_textView);
@@ -36,9 +40,9 @@ public class AndroidViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
                 intent = new Intent(v.getContext(), DisplayActivity.class);
-                intent.putExtra("ver", myAndroid.getVer());
-                intent.putExtra("name", myAndroid.getName());
-                intent.putExtra("api", myAndroid.getApi());
+                intent.putExtra(VER_KEY, myAndroid.getVer());
+                intent.putExtra(NAME_KEY, myAndroid.getName());
+                intent.putExtra(API_KEY, myAndroid.getApi());
                 v.getContext().startActivity(intent);
             }
         });
